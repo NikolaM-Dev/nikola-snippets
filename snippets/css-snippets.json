@@ -1,0 +1,22 @@
+{
+  "Insert a CSS variable": {
+    "prefix": "var",
+    "body": "var(--$1)$2;\n"
+  },
+  "Insert rgb value": {
+    "prefix": "rgb",
+    "body": "rgb($1, $2, $3);\n"
+  },
+  "Insert rgba value": {
+    "prefix": "rbga",
+    "body": "rgb($1, $2, $3, $4);\n"
+  },
+  "Insert hsl value": {
+    "prefix": "hsl",
+    "body": "hsl($1, $2, $3);\n"
+  },
+  "Insert hsla value": {
+    "prefix": "hsla",
+    "body": "hsl($1, $2, $3, $4);\n"
+  }
+}

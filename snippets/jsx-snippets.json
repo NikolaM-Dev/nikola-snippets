@@ -1,0 +1,20 @@
+{
+  "rfc": {
+    "prefix": "rfc",
+    "body": [
+      "import React from 'react'",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t<h1>$1</h1>",
+      "\t\t\t$0",
+      "\t\t</>",
+      "\t);",
+      "};",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ]
+  }
+}

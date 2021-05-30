@@ -1,0 +1,59 @@
+{
+  "name": "nikola-snippets",
+  "displayName": "Nikola-Snippets",
+  "description": "All the snippets you'll need",
+  "version": "0.0.1",
+  "publisher": "nikola",
+  "engines": {
+    "vscode": "^1.56.0"
+  },
+  "license": "MIT",
+  "icon": "images/logo.png",
+  "keywords": [
+    "snippets",
+    "react",
+    "javascript",
+    "typescript",
+    "css",
+    "markdown"
+  ],
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/jsx-snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/jsx-snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/css-snippets.json"
+      },
+      {
+        "language": "markdown",
+        "path": "./snippets/md-snippets.json"
+      }
+    ]
+  }
+}

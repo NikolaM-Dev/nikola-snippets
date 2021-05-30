@@ -1,0 +1,16 @@
+{
+  "Insert code fense": {
+    "prefix": "c",
+    "body": "```\n${1}\n```"
+  },
+
+  "Insert link": {
+    "prefix": "a",
+    "body": "[${1:text}](${2:http://})"
+  },
+
+  "Insert image": {
+    "prefix": "img",
+    "body": "![${1:alt}](${2:http://})"
+  }
+}
