@@ -12,5 +12,14 @@
   "Insert image": {
     "prefix": "img",
     "body": "![${1:alt}](${2:http://})"
+  },
+
+  "Insert table": {
+    "prefix": "table",
+    "body": [
+      "| ${1:Column1} | ${2:Column2 |",
+      "| -----------: | ----------- |",
+      "|   ${3:row1}  |   ${4:row1} |"
+    ]
   }
 }

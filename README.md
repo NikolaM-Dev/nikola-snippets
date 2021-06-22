@@ -3,7 +3,65 @@
 	<h1 align="center">🌌 Nikola Snippets 🌌</h1>
 </div>
 
+## Supported languages (file extensions)
+
+- JavaScript (.js)
+- JavaScript React (.jsx)
+- TypeScript (.ts)
+- TypeScript React (.tsx)
+- CSS (.css)
+- MarkDown (.md)
+
 ## Javascript / Typescript
+
+|  Prefix | Method                                         |
+| ------: | ---------------------------------------------- |
+|  `imp→` | `import moduleName from 'module';`             |
+|  `imd→` | `import { destructuredModule } from 'module';` |
+|  `req→` | `const moduleName = require('module');`        |
+|   `ed→` | `export default moduleName`;                   |
+|   `me→` | `module.exports = { moduleName };`             |
+|   `cl→` | `console.log('', );`                           |
+|   `ce→` | `console.error('');`                           |
+|   `fn→` | `const functionName = (params) => `            |
+|  `afn→` | `const functionName = async (params) => `      |
+|    `c→` | `const name = value; `                         |
+|    `l→` | `let name = value;`                            |
+|  `obj→` | `const name = { value };`                      |
+|  `arr→` | `const name = [ value, ];`                     |
+|  `des→` | `const {name} = value;`                        |
+| `desa→` | `const [name] = value;`                        |
+|   `ut→` | `export const nameFunction = () => `           |
+
+## React ⚛️
+
+|  Prefix | Method                              |
+| ------: | ----------------------------------- |
+|  `imr→` | `import React from react';`         |
+| `imrd→` | `import react-DOM from react-dom';` |
+|   `fm→` | `<> fragment </>`                   |
+
+## MarkDown
+
+| Prefix | Method                 |
+| -----: | ---------------------- |
+|   `c→` | ` ```language $0 ``` ` |
+|   `a→` | `[text][http://]`      |
+| `img→` | `[alt][http://]`       |
+
+## CSS
+
+| Prefix | Method                                    |
+| -----: | ----------------------------------------- |
+| `var→` | `var(--name): value;`                     |
+| `rgb→` | `rgb(red, green, blue);`                  |
+| `rgb→` | `rgba(red, green, blue, alpha);`          |
+| `hsl→` | `hsl(hue, saturation, lightness);`        |
+| `hsl→` | `hsl(hue, saturation, lightness, alpha);` |
+
+<br />
+
+## Javascript / Typescript `View`
 
 ### `cl`
 
@@ -141,7 +199,7 @@ export const $TM_FILENAME_BASE = () => {
 };
 ```
 
-## React ⚛️
+## React ⚛️ `View`
 
 ### `imr`
 
@@ -180,7 +238,7 @@ const $TM_FILENAME_BASE = () => {
 export default $TM_FILENAME_BASE;
 ```
 
-## MarkDown
+## MarkDown `View`
 
 ### `c`
 
@@ -202,7 +260,7 @@ $0
 ![alt](http://)
 ```
 
-## CSS
+## CSS `View`
 
 ### `var`
 

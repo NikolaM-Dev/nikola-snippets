@@ -1,56 +1,79 @@
 {
-  "console.log()": {
+  "console.log('', )": {
     "prefix": "cl",
     "body": "console.log(${1:'$2', $3});\n"
   },
-  "console.error()": {
+
+  "console.error('')": {
     "prefix": "ce",
     "body": "console.error($1);\n"
   },
-  "import from ''": {
+
+  "import moduleName from 'module'": {
     "prefix": "imp",
     "body": "import ${2:moduleName} from '${1:module}';\n"
   },
-  "const {} = require('')": {
+
+  "const moduleName = require('module')": {
     "prefix": "req",
     "body": "const ${2:moduleName} = require('${1:module}');\n"
   },
-  "import {} from ''": {
+
+  "const { moduleName } = require('module')": {
+    "prefix": "reqd",
+    "body": "const ${2:moduleName} = require('${1:module}');\n"
+  },
+
+  "import { destructuredModule } from 'module'": {
     "prefix": "imd",
     "body": "import { $2} } from '${1:module}';\n"
   },
+
   "() => {}": {
     "prefix": "fn",
     "body": "const ${1:name} = ${2:($3)} => $4\n"
   },
+
   "async () => {}": {
     "prefix": "afn",
     "body": "const {1:name} = async ${2:($3)} => $4\n"
   },
-  "const = ": {
+
+  "const name = value": {
     "prefix": "c",
     "body": "const {1:name} = ${2:value};\n"
   },
-  "let = ": {
+
+  "let name = value": {
     "prefix": "l",
     "body": "let {1:name} = ${2:value};\n"
   },
-  "const =  {}": {
+
+  "const name =  { value }": {
     "prefix": "obj",
     "body": "const {1:name} = {\n\t$2\n};\n"
   },
-  "const =  []": {
+
+  "const name =  [ value, ]": {
     "prefix": "arr",
     "body": "const {1:name} = [${2:value}];\n"
   },
-  "const {} =": {
+
+  "const { name } = value": {
     "prefix": "des",
     "body": "const { $2 } = $1;\n"
   },
+
+  "const [name] = value": {
+    "prefix": "desa",
+    "body": "const [ $2 ] = $1;\n"
+  },
+
   "export default": {
     "prefix": "ed",
     "body": "export default ${1:$TM_FILENAME_BASE};"
   },
+
   "module.exports = {}": {
     "prefix": "me",
     "body": "module.exports = {${1:$TM_FILENAME_BASE}};"
@@ -60,18 +83,22 @@
     "prefix": "desc",
     "body": ["describe('$1', () => {", "\t$0", "});", ""]
   },
+
   "testBlock": {
     "prefix": "test",
     "body": ["test('should $1', () => {", "\t$0", "});", ""]
   },
+
   "testAsyncBlock": {
     "prefix": "testa",
     "body": ["test('should $1', async () => {", "\t$0", "});", ""]
   },
+
   "itBlock": {
     "prefix": "it",
     "body": ["it('should $1', () => {", "\t$0", "})", ""]
   },
+
   "itAsyncBlock": {
     "prefix": "ita",
     "body": ["it('should $1', async () => {", "\t$0", "})", ""]
@@ -81,14 +108,17 @@
     "prefix": "imr",
     "body": "import React from 'react';\n"
   },
+
   "import ReactDOM from 'react-dom'": {
     "prefix": "imrd",
     "body": "import React-DOM from 'react-dom';\n"
   },
+
   "fragment": {
     "prefix": "fm",
     "body": "<>\n\t${1:context}\n</>"
   },
+
   "util function": {
     "prefix": "ut",
     "body": ["export const $TM_FILENAME_BASE = () => {", "\t$0", "}"]
