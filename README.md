@@ -43,11 +43,12 @@
 
 ## MarkDown
 
-| Prefix | Method                 |
-| -----: | ---------------------- |
-|   `c→` | ` ```language $0 ``` ` |
-|   `a→` | `[text][http://]`      |
-| `img→` | `[alt][http://]`       |
+|   Prefix | Method                 |
+| -------: | ---------------------- |
+|     `c→` | ` ```language $0 ``` ` |
+|     `a→` | `[text][http://]`      |
+|   `img→` | `[alt][http://]`       |
+| `table→` | `One table 2 x 2`      |
 
 ## CSS
 
