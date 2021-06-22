@@ -9,35 +9,39 @@
   },
   "import from ''": {
     "prefix": "imp",
-    "body": "import $2 from '$1';\n"
+    "body": "import ${2:moduleName} from '${1:module}';\n"
+  },
+  "const {} = require('')": {
+    "prefix": "req",
+    "body": "const ${2:moduleName} = require('${1:module}');\n"
   },
   "import {} from ''": {
     "prefix": "imd",
-    "body": "import { $2 } from '$1';\n"
+    "body": "import { $2} } from '${1:module}';\n"
   },
   "() => {}": {
     "prefix": "fn",
-    "body": "const $1 = ${2:($3)} => $4\n"
+    "body": "const ${1:name} = ${2:($3)} => $4\n"
   },
   "async () => {}": {
     "prefix": "afn",
-    "body": "const $1 = async ${2:($3)} => $4\n"
+    "body": "const {1:name} = async ${2:($3)} => $4\n"
   },
   "const = ": {
     "prefix": "c",
-    "body": "const $1 = $2;\n"
+    "body": "const {1:name} = ${2:value};\n"
   },
   "let = ": {
     "prefix": "l",
-    "body": "let $1 = $2;\n"
+    "body": "let {1:name} = ${2:value};\n"
   },
   "const =  {}": {
     "prefix": "obj",
-    "body": "const $1 = {\n\t$2\n};\n"
+    "body": "const {1:name} = {\n\t$2\n};\n"
   },
   "const =  []": {
     "prefix": "arr",
-    "body": "const $1 = [\n\t$2\n];\n"
+    "body": "const {1:name} = [${2:value}];\n"
   },
   "const {} =": {
     "prefix": "des",
@@ -45,7 +49,11 @@
   },
   "export default": {
     "prefix": "ed",
-    "body": "export default $1;"
+    "body": "export default ${1:$TM_FILENAME_BASE};"
+  },
+  "module.exports = {}": {
+    "prefix": "me",
+    "body": "module.exports = {${1:$TM_FILENAME_BASE}};"
   },
 
   "describe": {
@@ -58,7 +66,7 @@
   },
   "testAsyncBlock": {
     "prefix": "testa",
-    "body": ["test('should $1', async () => {", "\t$0", "})", ""]
+    "body": ["test('should $1', async () => {", "\t$0", "});", ""]
   },
   "itBlock": {
     "prefix": "it",
@@ -74,15 +82,15 @@
     "body": "import React from 'react';\n"
   },
   "import ReactDOM from 'react-dom'": {
-    "prefix": "imr",
+    "prefix": "imrd",
     "body": "import React-DOM from 'react-dom';\n"
   },
   "fragment": {
     "prefix": "fm",
-    "body": "<>\n\t$1</>"
+    "body": "<>\n\t${1:context}\n</>"
   },
   "util function": {
     "prefix": "ut",
-    "body": ["export const $TM_FILENAME_BASE = () => {", "", "}"]
+    "body": ["export const $TM_FILENAME_BASE = () => {", "\t$0", "}"]
   }
 }
