@@ -2,7 +2,7 @@
   "name": "nikola-snippets",
   "displayName": "Nikola-Snippets",
   "description": "All the snippets you'll need",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "nikola",
   "engines": {
     "vscode": "^1.56.0"

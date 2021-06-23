@@ -19,6 +19,7 @@
 |  `imp→` | `import moduleName from 'module';`             |
 |  `imd→` | `import { destructuredModule } from 'module';` |
 |  `req→` | `const moduleName = require('module');`        |
+| `reqd→` | `const { moduleName } = require('module');`    |
 |   `ed→` | `export default moduleName`;                   |
 |   `me→` | `module.exports = { moduleName };`             |
 |   `cl→` | `console.log('', );`                           |
@@ -52,13 +53,14 @@
 
 ## CSS
 
-| Prefix | Method                                    |
-| -----: | ----------------------------------------- |
-| `var→` | `var(--name): value;`                     |
-| `rgb→` | `rgb(red, green, blue);`                  |
-| `rgb→` | `rgba(red, green, blue, alpha);`          |
-| `hsl→` | `hsl(hue, saturation, lightness);`        |
-| `hsl→` | `hsl(hue, saturation, lightness, alpha);` |
+|  Prefix | Method                                    |
+| ------: | ----------------------------------------- |
+|  `var→` | `var(--name);`                            |
+| `dvar→` | `--name: value;`                          |
+|  `rgb→` | `rgb(red, green, blue);`                  |
+|  `rgb→` | `rgba(red, green, blue, alpha);`          |
+|  `hsl→` | `hsl(hue, saturation, lightness);`        |
+|  `hsl→` | `hsl(hue, saturation, lightness, alpha);` |
 
 <br />
 
@@ -67,75 +69,87 @@
 ### `cl`
 
 ```javascript
-console.log(${1:'$2', $3});
+console.log('');
 ```
 
 ### `ce`
 
 ```javascript
-console.error($1);
+console.error(|);
 ```
 
 ### `imp`
 
 ```javascript
-import ${2:moduleName} from '${1:module}';
-```
-
-### `req`
-
-```javascript
-const ${2:moduleName} = require('${1:module}');
+import moduleName from 'module';
 ```
 
 ### `imd`
 
 ```javascript
-import { $2 } from '${1:module}';
+import { moduleName } from 'module';
+```
+
+### `req`
+
+```javascript
+const moduleName = require('module');
+```
+
+### `reqd`
+
+```javascript
+const { moduleName } = require('module');
 ```
 
 ### `fn`
 
 ```javascript
-const $1 = ($3) => $4;
+const nameFunction = (params) => |
 ```
 
 ### `afn`
 
 ```javascript
-const $1 = async ($3) => $4;
+const nameFunction = async (params) => |
 ```
 
 ### `c`
 
 ```javascript
-const $1 = $2;
+const name = value;
 ```
 
 ### `l`
 
 ```javascript
-let $1 = $2;
+let name = value;
 ```
 
 ### `obj`
 
 ```javascript
-const $1 = {
-  $2,
+const name = {
+  value,
 };
 ```
 
 ### `arr`
 
 ```javascript
-const $1 = [$2];
+const name = [value];
 ```
 
 ### `des`
 
 ```javascript
-const { $2 } = $1;
+const { value } = name;
+```
+
+### `desa`
+
+```javascript
+const [value] = name;
 ```
 
 ### `ed`
@@ -266,38 +280,44 @@ $0
 ### `var`
 
 ```css
-var(--$1): $2;
+var(--name);
+```
+
+`dvar`
+
+```css
+--name: value;"
 ```
 
 ### `rgb`
 
 ```css
-rgb($1, $2, $3);
+rgb(red, green, blue);
 ```
 
 ### `rgba`
 
 ```css
-rgba($1, $2, $3, $4);
+rgba(red, green, blue, alpha);
 ```
 
 ### `hsl`
 
 ```css
-hsl($1, $2, $3);"
+hsl(hue, saturation, lightness);"
 ```
 
 ### `hsla`
 
 ```css
-hsla($1, $2, $3, $4);
+hsla(hue, saturation, lightness, alpha);
 ```
 
 <br />
 
 > 🇪🇦 Añade un pr si quieres que agrege tu snippet favorito
 
-> 🇬🇧 Add one if you want me to add your favorite snippet
+> 🇬🇧 Add one pr if you want me to add your favorite snippet
 
 <br />
 
